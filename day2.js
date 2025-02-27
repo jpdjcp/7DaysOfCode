@@ -18,7 +18,7 @@ function askUserData() {
 }
 
 function askIfLike() {
-    answer = prompt(`¿Te gusta estudiar ${language}? Responde con el número 1 para SÍ o 2 para NO.`);
+    answer = prompt(`¿Te gusta estudiar ${language}? Elija una opción: \n 1 - SÍ \n 2 - NO.`);
 
     if (answer == 1) {
         alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.");
@@ -26,6 +26,6 @@ function askIfLike() {
         alert("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?");
     } else {
         alert("Debe ingresar 1 para SÍ o 2 para NO");
-        ask();
+        askIfLike();
     }
 }
