@@ -1,14 +1,24 @@
-let name = prompt("¿Cuál es tu nombre?");
-let age = prompt("¿Cuántos años tienes?");
-let language = prompt("¿Qué lenguaje de programación estás estudiando?");
+let name;
+let age;
+let language;
+let answer;
 
-alert(`Hola ${name}, tienes ${age} años y ya estás aprendiendo ${language}!`);
+document.getElementById("day2").addEventListener('click', (event) => {
+    event.preventDefault();
+    askUserData();
+    askIfLike();
+});
 
-// ejercicio opcional
-ask();
+function askUserData() {
+    name = prompt("¿Cuál es tu nombre?");
+    age = prompt("¿Cuántos años tienes?");
+    language = prompt("¿Qué lenguaje de programación estás estudiando?");
 
-function ask() {
-    let answer = prompt(`¿Te gusta estudiar ${language}? Responde con el número 1 para SÍ o 2 para NO.`);
+    alert(`Hola ${name}, tienes ${age} años y ya estás aprendiendo ${language}!`);
+}
+
+function askIfLike() {
+    answer = prompt(`¿Te gusta estudiar ${language}? Responde con el número 1 para SÍ o 2 para NO.`);
 
     if (answer == 1) {
         alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.");
